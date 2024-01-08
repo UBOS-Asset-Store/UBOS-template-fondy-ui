@@ -517,7 +517,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-11-08T09:31:03.416Z",
-        "updatedAt": "2023-11-25T20:09:26.299Z",
+        "updatedAt": "2024-01-08T16:27:48.977Z",
         "deleted": false,
         "policies": [
             {
@@ -541,7 +541,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "https://{{main.env.back}}"
+                    "url": "{{main.env.back}}/createUser"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -571,7 +571,7 @@
                         "value": true
                     }
                 ],
-                "path": "/createUser"
+                "path": ""
             },
             "dynamicBindingPathList": [
                 {
@@ -602,7 +602,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-10-14T10:51:21.173Z",
-        "updatedAt": "2023-11-25T20:09:30.325Z",
+        "updatedAt": "2024-01-08T16:27:22.143Z",
         "deleted": false,
         "policies": [
             {
@@ -626,7 +626,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "https://{{main.env.back}}"
+                    "url": "{{main.env.back}}/deleteUser"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -655,7 +655,7 @@
                         "value": true
                     }
                 ],
-                "path": "/deleteUser",
+                "path": "",
                 "body": "{\n\t\"_id\": \"{{Table1.selectedRow._id}}\"\n}"
             },
             "dynamicBindingPathList": [
@@ -683,7 +683,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-08-29T15:09:27.661Z",
-        "updatedAt": "2023-11-25T20:09:39.954Z",
+        "updatedAt": "2024-01-08T16:27:34.014Z",
         "deleted": false,
         "policies": [
             {
@@ -707,7 +707,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "https://{{main.env.back}}"
+                    "url": "htt{{main.env.back}}/editUserRole"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -737,7 +737,7 @@
                         "value": true
                     }
                 ],
-                "path": "/editUserRole"
+                "path": ""
             },
             "dynamicBindingPathList": [
                 {
@@ -765,7 +765,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-08-29T15:05:45.060Z",
-        "updatedAt": "2023-11-25T20:09:47.033Z",
+        "updatedAt": "2024-01-08T16:27:40.305Z",
         "deleted": false,
         "policies": [
             {
@@ -789,7 +789,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "https://{{main.env.back}}"
+                    "url": "{{main.env.back}}/getAllRoles"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -818,7 +818,7 @@
                         "value": true
                     }
                 ],
-                "path": "/getAllRoles"
+                "path": ""
             },
             "dynamicBindingPathList": [
                 {
@@ -841,7 +841,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-08-29T15:02:12.192Z",
-        "updatedAt": "2023-11-25T20:09:50.913Z",
+        "updatedAt": "2024-01-08T16:27:44.222Z",
         "deleted": false,
         "policies": [
             {
@@ -865,7 +865,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "https://{{main.env.back}}"
+                    "url": "{{main.env.back}}/getUsers"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -889,7 +889,7 @@
                         "value": true
                     }
                 ],
-                "path": "/getUsers"
+                "path": ""
             },
             "dynamicBindingPathList": [
                 {
@@ -1736,7 +1736,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-08-29T14:07:56.350Z",
-        "updatedAt": "2023-11-25T20:08:22.307Z",
+        "updatedAt": "2024-01-08T16:25:51.248Z",
         "deleted": false,
         "policies": [
             {
@@ -1760,7 +1760,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "https://{{main.env.back}}"
+                    "url": "{{main.env.back}}/createChildModule"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -1790,7 +1790,7 @@
                         "value": true
                     }
                 ],
-                "path": "/createChildModule"
+                "path": ""
             },
             "dynamicBindingPathList": [
                 {
@@ -1807,7 +1807,7 @@
                 "childModule_field.selectedOptionValue",
                 "TableParent.selectedRow._id",
                 "positionChild.text",
-                "childModule_field.selectedOptionValue,DEFAULT_REST_DATASOURCE,{{main.env.back,childModule_field.selectedOptionValue,DEFAULT_REST_DATASOURCE,{{main.env.back,DEFAULT_REST_DATASOURCE,{{main.env.back,DEFAULT_REST_DATASOURCE,{{main.env.back,DEFAULT_REST_DATASOURCE,{{main.env.back,DEFAULT_REST_DATASOURCE,https://{{main.env.back"
+                "main.env.back,DEFAULT_REST_DATASOURCE,{{main.env.back,DEFAULT_REST_DATASOURCE,{{main.env.back,DEFAULT_REST_DATASOURCE,{{main.env.back,DEFAULT_REST_DATASOURCE,https://{{main.env.back,DEFAULT_REST_DATASOURCE,https://{{main.env.back,DEFAULT_REST_DATASOURCE,{{main.env.back"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
@@ -1820,7 +1820,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-08-29T12:49:55.580Z",
-        "updatedAt": "2023-11-25T20:08:26.122Z",
+        "updatedAt": "2024-01-08T16:25:55.170Z",
         "deleted": false,
         "policies": [
             {
@@ -1844,7 +1844,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "https://{{main.env.back}}"
+                    "url": "{{main.env.back}}/createParentModule"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -1873,7 +1873,7 @@
                         "value": true
                     }
                 ],
-                "path": "/createParentModule",
+                "path": "",
                 "body": "{\n\t\"name\": \"{{name_field.text}}\",\n\t\"position\": {{position_field.text}},\n\t\"icon\": \"{{icon_field.text}}\"\n}"
             },
             "dynamicBindingPathList": [
@@ -1903,7 +1903,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-08-29T13:08:42.296Z",
-        "updatedAt": "2023-11-26T16:31:49.799Z",
+        "updatedAt": "2024-01-08T16:26:08.177Z",
         "deleted": false,
         "policies": [
             {
@@ -1960,9 +1960,7 @@
             ],
             "isValid": true,
             "invalids": [],
-            "jsonPathKeys": [
-                "main.env.back"
-            ],
+            "jsonPathKeys": [],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         }
@@ -1974,7 +1972,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-08-29T12:54:09.638Z",
-        "updatedAt": "2023-11-25T20:08:45.891Z",
+        "updatedAt": "2024-01-08T16:26:29.955Z",
         "deleted": false,
         "policies": [
             {
@@ -1998,7 +1996,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "https://{{main.env.back}}"
+                    "url": "{{main.env.back}}/getModules"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -2022,7 +2020,7 @@
                         "value": true
                     }
                 ],
-                "path": "/getModules"
+                "path": ""
             },
             "dynamicBindingPathList": [
                 {
@@ -2045,7 +2043,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-08-29T14:13:12.277Z",
-        "updatedAt": "2023-11-25T20:08:31.778Z",
+        "updatedAt": "2024-01-08T16:26:01.221Z",
         "deleted": false,
         "policies": [
             {
@@ -2069,7 +2067,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "https://{{main.env.back}}"
+                    "url": "{{main.env.back}}/deleteChildModule"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -2099,7 +2097,7 @@
                         "value": true
                     }
                 ],
-                "path": "/deleteChildModule"
+                "path": ""
             },
             "dynamicBindingPathList": [
                 {
@@ -2127,7 +2125,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-10-19T08:57:29.377Z",
-        "updatedAt": "2023-11-25T20:07:48.881Z",
+        "updatedAt": "2024-01-08T16:25:42.137Z",
         "deleted": false,
         "policies": [
             {
@@ -2151,7 +2149,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "https://{{main.env.back}}"
+                    "url": "{{main.env.back}}/signout"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -2180,7 +2178,7 @@
                         "value": true
                     }
                 ],
-                "path": "/signout",
+                "path": "",
                 "body": ""
             },
             "dynamicBindingPathList": [
@@ -2204,7 +2202,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-08-29T15:13:14.157Z",
-        "updatedAt": "2023-12-27T13:07:24.229Z",
+        "updatedAt": "2024-01-08T16:25:31.879Z",
         "deleted": false,
         "policies": [
             {
@@ -2228,7 +2226,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "https://{{main.env.back}}"
+                    "url": "{{main.env.back}}/login"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -2258,7 +2256,7 @@
                         "value": true
                     }
                 ],
-                "path": "/login"
+                "path": ""
             },
             "dynamicBindingPathList": [
                 {
@@ -4301,7 +4299,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-10-28T12:51:02.074Z",
-        "updatedAt": "2024-01-05T17:30:37.162Z",
+        "updatedAt": "2024-01-08T16:27:56.624Z",
         "deleted": false,
         "policies": [
             {
@@ -4325,7 +4323,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "https://{{main.env.back}}"
+                    "url": "{{main.env.back}}/signout"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -4354,7 +4352,7 @@
                         "value": true
                     }
                 ],
-                "path": "/signout",
+                "path": "",
                 "body": ""
             },
             "dynamicBindingPathList": [
@@ -5108,7 +5106,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-08-29T14:52:15.502Z",
-        "updatedAt": "2023-11-26T16:30:27.477Z",
+        "updatedAt": "2024-01-08T16:26:48.116Z",
         "deleted": false,
         "policies": [
             {
@@ -5132,7 +5130,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "https://{{main.env.back}}"
+                    "url": "{{main.env.back}}/addModuleToRole"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -5161,7 +5159,7 @@
                         "value": true
                     }
                 ],
-                "path": "/addModuleToRole",
+                "path": "",
                 "body": "{\n\t\"_id\":\"{{roles_table.selectedRow._id}}\",\n\t\"moduleValue\": {{modules_field.selectedOptionValues}},\n\t\"moduleName\": {{modules_field.selectedOptionLabels}},\n\t\"options\": {{options_switch.selectedValues}}\n}"
             },
             "dynamicBindingPathList": [
@@ -5192,7 +5190,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-08-29T14:26:27.553Z",
-        "updatedAt": "2023-11-25T20:09:04.372Z",
+        "updatedAt": "2024-01-08T16:26:52.371Z",
         "deleted": false,
         "policies": [
             {
@@ -5216,7 +5214,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "https://{{main.env.back}}"
+                    "url": "{{main.env.back}}/createRole"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -5246,7 +5244,7 @@
                         "value": true
                     }
                 ],
-                "path": "/createRole"
+                "path": ""
             },
             "dynamicBindingPathList": [
                 {
@@ -5273,7 +5271,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-08-29T14:49:08.307Z",
-        "updatedAt": "2024-01-08T12:30:25.871Z",
+        "updatedAt": "2024-01-08T16:27:03.597Z",
         "deleted": false,
         "policies": [
             {
@@ -5297,7 +5295,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "https://{{main.env.back}}"
+                    "url": "{{main.env.back}}/getModules"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -5321,7 +5319,7 @@
                         "value": true
                     }
                 ],
-                "path": "/getModules"
+                "path": ""
             },
             "dynamicBindingPathList": [
                 {
@@ -5344,7 +5342,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-08-29T14:27:18.685Z",
-        "updatedAt": "2024-01-08T14:28:15.882Z",
+        "updatedAt": "2024-01-08T16:30:30.921Z",
         "deleted": false,
         "policies": [
             {
@@ -5368,7 +5366,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "http://{{main.env.back}}"
+                    "url": "{{main.env.back}}/getRoles"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -5397,7 +5395,7 @@
                         "value": true
                     }
                 ],
-                "path": "/getRoles"
+                "path": ""
             },
             "dynamicBindingPathList": [
                 {
@@ -6173,7 +6171,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-11-18T16:51:48.152Z",
-        "updatedAt": "2023-11-25T20:08:54.396Z",
+        "updatedAt": "2024-01-08T16:26:38.183Z",
         "deleted": false,
         "policies": [
             {
@@ -6197,7 +6195,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "https://{{main.env.back}}"
+                    "url": "{{main.env.back}}/updateParentModule"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -6227,7 +6225,7 @@
                         "value": true
                     }
                 ],
-                "path": "/updateParentModule"
+                "path": ""
             },
             "dynamicBindingPathList": [
                 {
@@ -6257,7 +6255,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-11-18T16:55:13.835Z",
-        "updatedAt": "2023-11-25T20:08:37.714Z",
+        "updatedAt": "2024-01-08T16:26:05.401Z",
         "deleted": false,
         "policies": [
             {
@@ -6281,7 +6279,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "https://{{main.env.back}}"
+                    "url": "{{main.env.back}}/deleteModule"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -6311,7 +6309,7 @@
                         "value": true
                     }
                 ],
-                "path": "/deleteModule"
+                "path": ""
             },
             "dynamicBindingPathList": [
                 {
@@ -6338,7 +6336,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-11-18T17:04:12.998Z",
-        "updatedAt": "2023-11-25T20:08:49.895Z",
+        "updatedAt": "2024-01-08T16:26:33.868Z",
         "deleted": false,
         "policies": [
             {
@@ -6362,7 +6360,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "https://{{main.env.back}}"
+                    "url": "{{main.env.back}}/updateChildModule"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -6392,7 +6390,7 @@
                         "value": true
                     }
                 ],
-                "path": "/updateChildModule"
+                "path": ""
             },
             "dynamicBindingPathList": [
                 {
@@ -6421,7 +6419,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-11-22T10:57:53.258Z",
-        "updatedAt": "2023-11-26T16:30:25.286Z",
+        "updatedAt": "2024-01-08T16:26:59.620Z",
         "deleted": false,
         "policies": [
             {
@@ -6445,7 +6443,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "https://{{main.env.back}}"
+                    "url": "{{main.env.back}}/deleteRole"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -6474,7 +6472,7 @@
                         "value": true
                     }
                 ],
-                "path": "/deleteRole",
+                "path": "",
                 "body": "{\n\t\"_id\": \"{{roles_table.selectedRow._id}}\"\n}"
             },
             "dynamicBindingPathList": [
@@ -6502,7 +6500,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-11-22T13:23:38.662Z",
-        "updatedAt": "2023-11-25T20:09:08.136Z",
+        "updatedAt": "2024-01-08T16:26:55.866Z",
         "deleted": false,
         "policies": [
             {
@@ -6526,7 +6524,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "https://{{main.env.back}}"
+                    "url": "{{main.env.back}}/deleteModuleFromRole"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -6555,7 +6553,7 @@
                         "value": true
                     }
                 ],
-                "path": "/deleteModuleFromRole",
+                "path": "",
                 "body": "{\n\t\"_id\": \"{{roles_table.selectedRow._id}}\",\n\t\"moduleId\": {{modules_field_delete.selectedOptionValues}}\n}"
             },
             "dynamicBindingPathList": [
@@ -6588,7 +6586,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "https://{{main.env.back}}"
+                    "url": "{{main.env.back}}/sendEmailForResetPassword"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -6618,7 +6616,7 @@
                     }
                 ],
                 "body": "{\n\t\"email\": \"{{InputEmail.text}}\"\n}",
-                "path": "/sendEmailForResetPassword"
+                "path": ""
             },
             "dynamicBindingPathList": [
                 {
@@ -6638,7 +6636,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-05-08T16:58:12.700Z",
-        "updatedAt": "2023-11-25T20:07:43.848Z",
+        "updatedAt": "2024-01-08T16:25:37.483Z",
         "deleted": false,
         "policies": [
             {
@@ -6745,7 +6743,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "https://{{main.env.back}}"
+                    "url": "{{main.env.back}}/updateProduct"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -6775,7 +6773,7 @@
                         "value": true
                     }
                 ],
-                "path": "/updateProduct"
+                "path": ""
             },
             "dynamicBindingPathList": [
                 {
@@ -6791,7 +6789,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-05-31T20:39:58.361Z",
-        "updatedAt": "2023-12-06T21:25:23.176Z",
+        "updatedAt": "2024-01-08T16:28:05.037Z",
         "deleted": false,
         "policies": [
             {
