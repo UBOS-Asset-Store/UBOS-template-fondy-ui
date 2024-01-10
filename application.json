@@ -13,15 +13,19 @@
             "isDefault": true
         },
         {
-            "_id": "Modules",
-            "isDefault": false
-        },
-        {
             "_id": "Roles",
             "isDefault": false
         },
         {
+            "_id": "Modules",
+            "isDefault": false
+        },
+        {
             "_id": "Admin management",
+            "isDefault": false
+        },
+        {
+            "_id": "Start Page",
             "isDefault": false
         },
         {
@@ -30,10 +34,6 @@
         },
         {
             "_id": "Orders",
-            "isDefault": false
-        },
-        {
-            "_id": "Page5",
             "isDefault": false
         }
     ],

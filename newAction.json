@@ -841,7 +841,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-08-29T15:02:12.192Z",
-        "updatedAt": "2024-01-08T16:27:44.222Z",
+        "updatedAt": "2024-01-09T16:16:29.709Z",
         "deleted": false,
         "policies": [
             {
@@ -6810,100 +6810,8 @@
         ]
     },
     {
-        "_id": "657098e36b43c846d2b1797d",
-        "applicationId": "jetsondashboard",
-        "organizationId": "Org",
-        "pluginType": "API",
-        "pluginId": "API",
-        "Action": {
-            "name": "getData",
-            "datasource": {
-                "datasourceConfiguration": {
-                    "orgId": "645910bea779951100000019",
-                    "url": "https://nodered-8981-645910bea779951100000019.ubos.tech",
-                    "product_price": "price_1MytsdH1Ta6us8T1ZbzB3QUC",
-                    "cpu": 250,
-                    "ram": "512",
-                    "subscription_plan": "643e8bfadb35f70012db836d",
-                    "plan_id": "643e8bfadb35f70012db836d",
-                    "subscription_id": "sub_1NxYZBH1Ta6us8T1V71JVXSY",
-                    "serviceId": "nodered-8981-ubos-krn5x-nodered-8981"
-                },
-                "id": "651d9c2c920d7711000002e1",
-                "invalids": [],
-                "isValid": true,
-                "name": "nodered-8981",
-                "new": false,
-                "type": "api",
-                "organizationId": "Org",
-                "pluginId": "API",
-                "userPermissions": [
-                    "read:service",
-                    "manage:service"
-                ],
-                "settings_data": {
-                    "gitName": "",
-                    "projectName": "nodered-8981",
-                    "systemType": "latest",
-                    "gitUrl": "",
-                    "gitPassword": "",
-                    "urlNodeRed": "https://nodered-8981-645910bea779951100000019.ubos.tech",
-                    "serviceId": "nodered-8981-ubos-krn5x-nodered-8981",
-                    "applicationId": "645910bea77995110000001a",
-                    "env": [],
-                    "status": "ready"
-                }
-            },
-            "executeOnLoad": false,
-            "pageId": "Page5",
-            "actionConfiguration": {
-                "timeoutInMillisecond": 10000,
-                "encodeParamsToggle": true,
-                "httpMethod": "GET",
-                "headers": [],
-                "queryParameters": [],
-                "bodyFormData": [],
-                "formData": {
-                    "apiContentType": "none"
-                },
-                "pluginSpecifiedTemplates": [
-                    {
-                        "value": true
-                    }
-                ],
-                "path": "/dataTest"
-            },
-            "dynamicBindingPathList": [],
-            "isValid": true,
-            "invalids": [],
-            "jsonPathKeys": [],
-            "userSetOnLoad": false,
-            "confirmBeforeExecute": false
-        },
-        "createdAt": "2023-12-06T15:53:07.480Z",
-        "updatedAt": "2024-01-05T17:30:27.252Z",
-        "deleted": false,
-        "policies": [
-            {
-                "permission": "read:actions",
-                "groups": [],
-                "users": []
-            },
-            {
-                "permission": "manage:actions",
-                "groups": [],
-                "users": []
-            },
-            {
-                "permission": "execute:actions",
-                "groups": [],
-                "users": []
-            }
-        ]
-    },
-    {
         "name": "myFun1",
-        "pageId": "Page5",
+        "pageId": "Start Page",
         "executeOnLoad": false,
         "actionConfiguration": {
             "body": "() => {\n\t\t//write code here\n\t}",
@@ -6941,7 +6849,7 @@
     },
     {
         "name": "myFun2",
-        "pageId": "Page5",
+        "pageId": "Start Page",
         "executeOnLoad": false,
         "actionConfiguration": {
             "body": "() => {\n\tconsole.log( document.querySelector(\".ant-table-row-level-0\"))\n\t}",
@@ -6976,5 +6884,156 @@
             "async () => {\n\t\t//use async-await or promises\n\t}"
         ],
         "pluginType": "JS"
+    },
+    {
+        "_id": "659e78399fe90f059c863b15",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "checkData",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.back}}/checkData"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Login",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.back"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-01-10T10:58:01.788Z",
+        "updatedAt": "2024-01-10T10:59:01.586Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "659e81099fe90f059c863b16",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "registration",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.back}}/registration"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Login",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n\t\"email\":\"{{email_fieldSignup.text}}\",\n\t\"password\":\"{{pass_fieldSignup.text}}\"\n}"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                },
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.back",
+                "email_fieldSignup.text",
+                "pass_fieldSignup.text"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-01-10T11:35:37.538Z",
+        "updatedAt": "2024-01-10T14:37:05.491Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
     }
 ]
