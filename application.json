@@ -5,7 +5,7 @@
     "organizationId": "Org",
     "isPublic": true,
     "createdAt": "2023-03-02T13:50:57.853Z",
-    "updatedAt": "2024-01-08T19:28:10.804Z",
+    "updatedAt": "2024-01-12T14:43:42.975Z",
     "deleted": false,
     "pages": [
         {
@@ -1490,7 +1490,7 @@
                             "animateLoading": true,
                             "groupButtons": {
                                 "groupButton3": {
-                                    "label": "Вихід",
+                                    "label": "Logout",
                                     "iconName": "log-out",
                                     "id": "groupButton3",
                                     "buttonType": "SIMPLE",
@@ -1579,7 +1579,7 @@
                             "animateLoading": true,
                             "groupButtons": {
                                 "groupButton3": {
-                                    "label": "Меню",
+                                    "label": "Menu",
                                     "iconName": "menu",
                                     "id": "groupButton3",
                                     "buttonType": "MENU",
@@ -1591,24 +1591,34 @@
                                     "index": 0,
                                     "menuItems": {
                                         "menuItem2": {
-                                            "label": "Статистика",
+                                            "label": "Dashboard",
                                             "backgroundColor": "#FFFFFF",
                                             "id": "menuItem2",
                                             "widgetId": "",
-                                            "onClick": "{{navigateTo('Dashboard cheesestore', {})}}",
+                                            "onClick": "{{navigateTo('Dashboard', {})}}",
                                             "isVisible": true,
                                             "isDisabled": false,
                                             "index": 0
                                         },
+                                        "menuItemog2cxdaev3": {
+                                            "id": "menuItemog2cxdaev3",
+                                            "index": 1,
+                                            "label": "Orders",
+                                            "widgetId": "rov8ah0639",
+                                            "isDisabled": false,
+                                            "isVisible": true,
+                                            "backgroundColor": "#FFFFFF",
+                                            "onClick": "{{navigateTo('Orders', {})}}"
+                                        },
                                         "menuItem1": {
-                                            "label": "Адміністратори",
+                                            "label": "Admin settings",
                                             "backgroundColor": "#FFFFFF",
                                             "id": "menuItem1",
                                             "widgetId": "",
                                             "onClick": "{{navigateTo('Admin management', {})}}",
                                             "isVisible": true,
                                             "isDisabled": false,
-                                            "index": 1
+                                            "index": 2
                                         }
                                     },
                                     "iconAlign": "right"
@@ -1638,6 +1648,9 @@
                                 },
                                 {
                                     "key": "groupButtons.groupButton3.menuItems.menuItem2.onClick"
+                                },
+                                {
+                                    "key": "groupButtons.groupButton3.menuItems.menuItemog2cxdaev3.onClick"
                                 }
                             ],
                             "borderRadius": "ROUNDED"
@@ -1652,7 +1665,7 @@
                     "leftColumn": 0,
                     "rightColumn": 557.625,
                     "topRow": 0,
-                    "bottomRow": 420,
+                    "bottomRow": 390,
                     "parentId": "ss4bddp965"
                 }
             ],
