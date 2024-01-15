@@ -70,10 +70,10 @@
         "workspaceId": "Org"
     },
     {
-        "id": "6477a71ad391e1f93c2ebb94",
+        "id": "65a554ba9fe90f059c863b1b",
         "name": "JSObject1",
-        "pageId": "Orders",
-        "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\n\t\t//write code here\n\t},\n\tmyBase:  () => {\nconst arr = [\n\t{\n\t\ttitle: \"Сир витриманий напівтвердий &#39;&#39; Палермо&#39;&#39;\",\n    price: \"65 грн\",\n    amount: 1,\n    price_float: \"65\"\n\t},\n\t{title: \"Сир витриманий напівтвердий &#39;&#39; Томато чіз&#39;&#39;\",\n   price: \"64 грн\",\n   amount: 1,\n   price_float: \"64\"},\n\t{title: \"Сир &quot;Халумі&quot;\",\n  price: \"38 грн\",\n  amount: 2,\n  price_float: \"38\"}\n]\n\treturn arr\n\t}\n\n}",
+        "pageId": "Dashboard",
+        "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\n\t\tlet data = {{getOrders.run()}};\ndata.map((i) => {\n\t\n})\n\t},\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
         "variables": [
             {
                 "name": "myVar1",
@@ -87,10 +87,10 @@
         "actions": [
             {
                 "name": "myFun1",
-                "pageId": "Orders",
+                "pageId": "Dashboard",
                 "executeOnLoad": false,
                 "actionConfiguration": {
-                    "body": "() => {\n\t\t//write code here\n\t}",
+                    "body": "() => {\n\t\tlet data \n\t}",
                     "isAsync": false,
                     "timeoutInMillisecond": 10000,
                     "jsArguments": [],
@@ -98,110 +98,9 @@
                     "encodeParamsToggle": true
                 },
                 "clientSideExecution": true,
-                "_id": "6477a71ad391e1f93c2ebb95",
-                "id": "6477a71ad391e1f93c2ebb95",
-                "collectionId": "6477a71ad391e1f93c2ebb94",
-                "confirmBeforeExecute": false,
-                "applicationId": "jetsondashboard",
-                "datasource": {
-                    "isValid": true,
-                    "messages": [],
-                    "name": "UNUSED_DATASOURCE",
-                    "new": true,
-                    "pluginId": "",
-                    "userPermissions": []
-                },
-                "dynamicBindingPathList": [
-                    {
-                        "key": "body"
-                    }
-                ],
-                "fullyQualifiedName": "JSObject1.myFun1",
-                "isValid": true,
-                "jsonPathKeys": [
-                    "() => {\n\t\t//write code here\n\t}"
-                ],
-                "pluginType": "JS"
-            },
-            {
-                "name": "myBase",
-                "pageId": "Orders",
-                "executeOnLoad": false,
-                "actionConfiguration": {
-                    "body": "() => {\nconst arr = [\n\t{\n\t\ttitle: \"Сир витриманий напівтвердий &#39;&#39; Палермо&#39;&#39;\",\n    price: \"65 грн\",\n    amount: 1,\n    price_float: \"65\"\n\t},\n\t{title: \"Сир витриманий напівтвердий &#39;&#39; Томато чіз&#39;&#39;\",\n   price: \"64 грн\",\n   amount: 1,\n   price_float: \"64\"},\n\t{title: \"Сир &quot;Халумі&quot;\",\n  price: \"38 грн\",\n  amount: 2,\n  price_float: \"38\"}\n]\n\treturn arr\n\t}",
-                    "isAsync": false,
-                    "timeoutInMillisecond": 10000,
-                    "jsArguments": [],
-                    "paginationType": "NONE",
-                    "encodeParamsToggle": true
-                },
-                "clientSideExecution": true,
-                "_id": "6477a71ad391e1f93c2ebb96",
-                "id": "6477a71ad391e1f93c2ebb96",
-                "collectionId": "6477a71ad391e1f93c2ebb94",
-                "confirmBeforeExecute": false,
-                "applicationId": "jetsondashboard",
-                "datasource": {
-                    "isValid": true,
-                    "messages": [],
-                    "name": "UNUSED_DATASOURCE",
-                    "new": true,
-                    "pluginId": "",
-                    "userPermissions": []
-                },
-                "dynamicBindingPathList": [
-                    {
-                        "key": "body"
-                    }
-                ],
-                "fullyQualifiedName": "JSObject1.myBase",
-                "isValid": true,
-                "jsonPathKeys": [
-                    "async () => {\n\t\t//use async-await or promises\n\t}"
-                ],
-                "pluginType": "JS"
-            }
-        ],
-        "applicationId": "jetsondashboard",
-        "pluginType": "JS",
-        "_id": "6477a71ad391e1f93c2ebb94",
-        "pluginId": "JS",
-        "actionIds": [],
-        "archivedActionIds": [],
-        "archivedActions": []
-    },
-    {
-        "id": "6571de1b6b43c846d2b1797e",
-        "name": "JSObject1",
-        "pageId": "Start Page",
-        "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\n\t\t//write code here\n\t},\n\tmyFun2:() => {\n\tconsole.log( document.querySelector(\".ant-table-row-level-0\"))\n\t}\n}",
-        "variables": [
-            {
-                "name": "myVar1",
-                "value": []
-            },
-            {
-                "name": "myVar2",
-                "value": {}
-            }
-        ],
-        "actions": [
-            {
-                "name": "myFun1",
-                "pageId": "Page5",
-                "executeOnLoad": false,
-                "actionConfiguration": {
-                    "body": "() => {\n\t\t//write code here\n\t}",
-                    "isAsync": false,
-                    "timeoutInMillisecond": 10000,
-                    "jsArguments": [],
-                    "paginationType": "NONE",
-                    "encodeParamsToggle": true
-                },
-                "clientSideExecution": true,
-                "_id": "6571de1b6b43c846d2b1797f",
-                "id": "6571de1b6b43c846d2b1797f",
-                "collectionId": "6571de1b6b43c846d2b1797e",
+                "_id": "65a554bb9fe90f059c863b1c",
+                "id": "65a554bb9fe90f059c863b1c",
+                "collectionId": "65a554ba9fe90f059c863b1b",
                 "confirmBeforeExecute": false,
                 "applicationId": "jetsondashboard",
                 "datasource": {
@@ -226,20 +125,20 @@
             },
             {
                 "name": "myFun2",
-                "pageId": "Page5",
+                "pageId": "Dashboard",
                 "executeOnLoad": false,
                 "actionConfiguration": {
-                    "body": "() => {\n\tconsole.log( document.querySelector(\".ant-table-row-level-0\"))\n\t}",
-                    "isAsync": false,
+                    "body": "async () => {\n\t\t//use async-await or promises\n\t}",
+                    "isAsync": true,
                     "timeoutInMillisecond": 10000,
                     "jsArguments": [],
                     "paginationType": "NONE",
                     "encodeParamsToggle": true
                 },
                 "clientSideExecution": true,
-                "_id": "6571de1b6b43c846d2b17980",
-                "id": "6571de1b6b43c846d2b17980",
-                "collectionId": "6571de1b6b43c846d2b1797e",
+                "_id": "65a554bb9fe90f059c863b1d",
+                "id": "65a554bb9fe90f059c863b1d",
+                "collectionId": "65a554ba9fe90f059c863b1b",
                 "confirmBeforeExecute": false,
                 "applicationId": "jetsondashboard",
                 "datasource": {
@@ -265,10 +164,6 @@
         ],
         "applicationId": "jetsondashboard",
         "pluginType": "JS",
-        "_id": "6571de1b6b43c846d2b1797e",
-        "pluginId": "JS",
-        "actionIds": [],
-        "archivedActionIds": [],
-        "archivedActions": []
+        "_id": "65a554ba9fe90f059c863b1b"
     }
 ]
