@@ -1903,7 +1903,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-08-29T13:08:42.296Z",
-        "updatedAt": "2024-01-08T16:26:08.177Z",
+        "updatedAt": "2024-01-19T08:54:31.562Z",
         "deleted": false,
         "policies": [
             {
@@ -1927,7 +1927,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "https://uieditor-9533-645910bea779951100000019.ubos.tech"
+                    "url": "{{main.env.front}}/api/v1/pages"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -1951,7 +1951,7 @@
                         "value": true
                     }
                 ],
-                "path": "/api/v1/pages"
+                "path": ""
             },
             "dynamicBindingPathList": [
                 {
@@ -1960,7 +1960,10 @@
             ],
             "isValid": true,
             "invalids": [],
-            "jsonPathKeys": [],
+            "jsonPathKeys": [
+                "main.env.",
+                "main.env.front"
+            ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         }
@@ -1972,7 +1975,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-08-29T12:54:09.638Z",
-        "updatedAt": "2024-01-08T16:26:29.955Z",
+        "updatedAt": "2024-01-19T08:34:18.845Z",
         "deleted": false,
         "policies": [
             {
@@ -2202,7 +2205,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-08-29T15:13:14.157Z",
-        "updatedAt": "2024-01-12T14:44:47.578Z",
+        "updatedAt": "2024-01-19T12:50:31.083Z",
         "deleted": false,
         "policies": [
             {
@@ -6559,7 +6562,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-05-08T16:58:12.700Z",
-        "updatedAt": "2024-01-08T16:25:37.483Z",
+        "updatedAt": "2024-01-19T12:44:58.758Z",
         "deleted": false,
         "policies": [
             {
@@ -6686,7 +6689,7 @@
             "executeOnLoad": false,
             "pageId": "Login",
             "actionConfiguration": {
-                "timeoutInMillisecond": "30000",
+                "timeoutInMillisecond": "10000",
                 "encodeParamsToggle": true,
                 "httpMethod": "GET",
                 "headers": [],
@@ -6715,7 +6718,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-01-10T10:58:01.788Z",
-        "updatedAt": "2024-01-18T17:54:17.886Z",
+        "updatedAt": "2024-01-19T08:31:45.545Z",
         "deleted": false,
         "policies": [
             {
@@ -6866,7 +6869,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-01-10T15:28:54.815Z",
-        "updatedAt": "2024-01-12T11:36:22.132Z",
+        "updatedAt": "2024-01-19T08:20:02.197Z",
         "deleted": false,
         "policies": [
             {
