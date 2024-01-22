@@ -2762,10 +2762,10 @@
                                                             {
                                                                 "isVisible": true,
                                                                 "iconName": "cross",
-                                                                "borderRadius": "SHARP",
+                                                                "borderRadius": "CIRCLE",
                                                                 "boxShadow": "NONE",
-                                                                "buttonColor": "#2E3D49",
-                                                                "buttonVariant": "TERTIARY",
+                                                                "buttonColor": "#FFFFFF",
+                                                                "buttonVariant": "PRIMARY",
                                                                 "isDisabled": false,
                                                                 "widgetName": "IconButtonCloseModalCreateChilCopy",
                                                                 "version": 1,
@@ -2839,7 +2839,7 @@
                                                                 "key": "gq708smg70",
                                                                 "iconSVG": "/static/media/icon.cca02633.svg",
                                                                 "buttonVariant": "PRIMARY",
-                                                                "buttonColor": "#03B365",
+                                                                "buttonColor": "#A8CFCC",
                                                                 "disabledWhenInvalid": true,
                                                                 "resetFormOnClick": true,
                                                                 "widgetId": "wlbpt0su59",
@@ -3091,10 +3091,10 @@
                                                             {
                                                                 "isVisible": true,
                                                                 "iconName": "cross",
-                                                                "borderRadius": "SHARP",
+                                                                "borderRadius": "CIRCLE",
                                                                 "boxShadow": "NONE",
-                                                                "buttonColor": "#2E3D49",
-                                                                "buttonVariant": "TERTIARY",
+                                                                "buttonColor": "#FFFFFF",
+                                                                "buttonVariant": "PRIMARY",
                                                                 "isDisabled": false,
                                                                 "widgetName": "IconButtonCloseModalCreatePareCopy",
                                                                 "version": 1,
@@ -3164,7 +3164,7 @@
                                                                 "key": "gq708smg70",
                                                                 "iconSVG": "/static/media/icon.cca02633.svg",
                                                                 "buttonVariant": "PRIMARY",
-                                                                "buttonColor": "#03B365",
+                                                                "buttonColor": "#A8CFCC",
                                                                 "disabledWhenInvalid": true,
                                                                 "resetFormOnClick": true,
                                                                 "widgetId": "teg73a4zcc",
@@ -7054,10 +7054,10 @@
                         "children": [
                             {
                                 "isVisible": true,
-                                "backgroundColor": "{{main.env.mainColor}}",
+                                "backgroundColor": "",
                                 "widgetName": "Container1",
                                 "containerStyle": "card",
-                                "borderColor": "{{main.env.mainColor}}",
+                                "borderColor": "",
                                 "borderWidth": "0",
                                 "borderRadius": "10",
                                 "boxShadow": "NONE",
@@ -7396,14 +7396,7 @@
                                 "topRow": 6,
                                 "bottomRow": 79,
                                 "parentId": "0",
-                                "dynamicBindingPathList": [
-                                    {
-                                        "key": "borderColor"
-                                    },
-                                    {
-                                        "key": "backgroundColor"
-                                    }
-                                ],
+                                "dynamicBindingPathList": [],
                                 "dynamicTriggerPathList": []
                             }
                         ],
@@ -7601,7 +7594,7 @@
                                         "isDisabled": false,
                                         "shouldScrollContents": false,
                                         "tabId": "tab1",
-                                        "tabName": "Нові",
+                                        "tabName": "All_tab",
                                         "children": [
                                             {
                                                 "isVisible": true,
@@ -8100,7 +8093,7 @@
                                         "isDisabled": false,
                                         "shouldScrollContents": false,
                                         "tabId": "tab2",
-                                        "tabName": "В обробці",
+                                        "tabName": "Pending_tab",
                                         "children": [
                                             {
                                                 "isVisible": true,
@@ -8593,7 +8586,7 @@
                                         "displayName": "Canvas",
                                         "key": "hqlqycihap",
                                         "tabId": "tabr6a6gdd0ak",
-                                        "tabName": "Успішні",
+                                        "tabName": "Successful_tab",
                                         "containerStyle": "none",
                                         "canExtend": false,
                                         "children": [
@@ -9088,7 +9081,7 @@
                                         "displayName": "Canvas",
                                         "key": "hqlqycihap",
                                         "tabId": "tab0sf9tf3bj9",
-                                        "tabName": "Відхилені",
+                                        "tabName": "Rejected_tab",
                                         "containerStyle": "none",
                                         "canExtend": false,
                                         "children": [
