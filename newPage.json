@@ -1707,7 +1707,7 @@
                                                         "id": "createdAt",
                                                         "horizontalAlignment": "LEFT",
                                                         "verticalAlignment": "CENTER",
-                                                        "columnType": "text",
+                                                        "columnType": "date",
                                                         "textSize": "PARAGRAPH",
                                                         "enableFilter": true,
                                                         "enableSort": true,
@@ -1716,7 +1716,10 @@
                                                         "isCellVisible": true,
                                                         "isDerived": false,
                                                         "label": "createdAt",
-                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.createdAt))}}"
+                                                        "computedValue": "{{roles_table.sanitizedTableData.map((currentRow) => ( currentRow.createdAt))}}",
+                                                        "iconName": "",
+                                                        "inputFormat": "YYYY-MM-DDTHH:mm:ss.SSSZ",
+                                                        "outputFormat": "YYYY-MM-DD HH:mm"
                                                     }
                                                 },
                                                 "derivedColumns": {},
