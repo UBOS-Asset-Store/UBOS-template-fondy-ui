@@ -1755,7 +1755,7 @@
                                                 "isLoading": false,
                                                 "parentColumnSpace": 18.734375,
                                                 "parentRowSpace": 10,
-                                                "leftColumn": 0,
+                                                "leftColumn": 1,
                                                 "rightColumn": 64,
                                                 "topRow": 7,
                                                 "bottomRow": 127,
@@ -1786,8 +1786,8 @@
                                                 "isLoading": false,
                                                 "parentColumnSpace": 18.734375,
                                                 "parentRowSpace": 10,
-                                                "leftColumn": 0,
-                                                "rightColumn": 11,
+                                                "leftColumn": 1,
+                                                "rightColumn": 12,
                                                 "topRow": 0,
                                                 "bottomRow": 6,
                                                 "parentId": "5goubwl3lo",
@@ -1823,8 +1823,8 @@
                                                 "isLoading": false,
                                                 "parentColumnSpace": 18.734375,
                                                 "parentRowSpace": 10,
-                                                "leftColumn": 11,
-                                                "rightColumn": 22,
+                                                "leftColumn": 12,
+                                                "rightColumn": 23,
                                                 "topRow": 0,
                                                 "bottomRow": 6,
                                                 "parentId": "5goubwl3lo",
@@ -3502,7 +3502,7 @@
                                                 "isLoading": false,
                                                 "parentColumnSpace": 20.798095703125,
                                                 "parentRowSpace": 10,
-                                                "leftColumn": 0,
+                                                "leftColumn": 1,
                                                 "rightColumn": 64,
                                                 "topRow": 62,
                                                 "bottomRow": 68,
@@ -3535,7 +3535,7 @@
                                                 "isLoading": false,
                                                 "parentColumnSpace": 13.97265625,
                                                 "parentRowSpace": 10,
-                                                "leftColumn": 0,
+                                                "leftColumn": 1,
                                                 "rightColumn": 16,
                                                 "topRow": 9,
                                                 "bottomRow": 15,
@@ -3742,7 +3742,7 @@
                                                 "isLoading": false,
                                                 "parentColumnSpace": 13.97265625,
                                                 "parentRowSpace": 10,
-                                                "leftColumn": 0,
+                                                "leftColumn": 1,
                                                 "rightColumn": 64,
                                                 "topRow": 16,
                                                 "bottomRow": 60,
@@ -3859,7 +3859,7 @@
                                                 "isLoading": false,
                                                 "parentColumnSpace": 13.97265625,
                                                 "parentRowSpace": 10,
-                                                "leftColumn": 0,
+                                                "leftColumn": 1,
                                                 "rightColumn": 64,
                                                 "topRow": 78,
                                                 "bottomRow": 126,
@@ -3890,8 +3890,8 @@
                                                 "isLoading": false,
                                                 "parentColumnSpace": 13.97265625,
                                                 "parentRowSpace": 10,
-                                                "leftColumn": 0,
-                                                "rightColumn": 16,
+                                                "leftColumn": 1,
+                                                "rightColumn": 17,
                                                 "topRow": 72,
                                                 "bottomRow": 78,
                                                 "parentId": "g9sb039o8n",
@@ -4007,7 +4007,7 @@
                                                 "isLoading": false,
                                                 "parentColumnSpace": 20.798095703125,
                                                 "parentRowSpace": 10,
-                                                "leftColumn": 0,
+                                                "leftColumn": 1,
                                                 "rightColumn": 64,
                                                 "topRow": 0,
                                                 "bottomRow": 6,
@@ -6690,7 +6690,7 @@
                                                                 "labelWidth": "10",
                                                                 "widgetName": "merchant_id_input",
                                                                 "version": 2,
-                                                                "defaultText": "",
+                                                                "defaultText": "{{getCredentials.data.merchant_id}}",
                                                                 "iconAlign": "left",
                                                                 "autoFocus": false,
                                                                 "labelStyle": "",
@@ -6716,7 +6716,11 @@
                                                                 "topRow": 7,
                                                                 "bottomRow": 11,
                                                                 "parentId": "ugctp3il0u",
-                                                                "dynamicBindingPathList": [],
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "defaultText"
+                                                                    }
+                                                                ],
                                                                 "dynamicTriggerPathList": []
                                                             },
                                                             {
@@ -6727,7 +6731,7 @@
                                                                 "labelWidth": "10",
                                                                 "widgetName": "password_input",
                                                                 "version": 2,
-                                                                "defaultText": "",
+                                                                "defaultText": "{{getCredentials.data.password}}",
                                                                 "iconAlign": "left",
                                                                 "autoFocus": false,
                                                                 "labelStyle": "",
@@ -6753,7 +6757,11 @@
                                                                 "topRow": 13,
                                                                 "bottomRow": 17,
                                                                 "parentId": "ugctp3il0u",
-                                                                "dynamicBindingPathList": [],
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "defaultText"
+                                                                    }
+                                                                ],
                                                                 "dynamicTriggerPathList": []
                                                             },
                                                             {
@@ -6865,7 +6873,12 @@
                                                                 ],
                                                                 "borderRadius": "ROUNDED",
                                                                 "boxShadow": "VARIANT3",
-                                                                "onClick": "{{saveCredentials.run(() => navigateTo('Orders', {}), () => {})}}"
+                                                                "onClick": "{{saveCredentials.run(() => {showAlert('Successfully connected!');getCredentials.run()}, () => showAlert('Please check your data and try again!'))}}",
+                                                                "dynamicPropertyPathList": [
+                                                                    {
+                                                                        "key": "onClick"
+                                                                    }
+                                                                ]
                                                             },
                                                             {
                                                                 "isVisible": true,
@@ -6903,10 +6916,11 @@
                                                                 ],
                                                                 "boxShadow": "VARIANT3",
                                                                 "borderRadius": "ROUNDED",
-                                                                "onClick": "{{copyToClipboard('https://fondynr-6597eb36387fb7110000038e.ubos.tech/makeOrder')}}",
+                                                                "onClick": "{{copyToClipboard(main.env.back + '/makeOrder')}}",
                                                                 "iconName": "duplicate",
                                                                 "iconAlign": "left",
-                                                                "tooltip": "Copy"
+                                                                "tooltip": "Copy",
+                                                                "dynamicPropertyPathList": []
                                                             }
                                                         ],
                                                         "minHeight": 400,
@@ -7002,7 +7016,19 @@
                     "deleted": false,
                     "policies": [],
                     "layoutOnLoadActions": [
-                        []
+                        [
+                            {
+                                "_id": "65b0d51bd0c0f7dec53ffac5",
+                                "id": "65b0d51bd0c0f7dec53ffac5",
+                                "confirmBeforeExecute": false,
+                                "name": "getCredentials",
+                                "pluginType": "API",
+                                "jsonPathKeys": [
+                                    "main.env.back"
+                                ],
+                                "timeoutInMillisecond": 10000
+                            }
+                        ]
                     ],
                     "layoutOnCloseActions": [
                         []
@@ -7098,8 +7124,8 @@
                                                 "isLoading": false,
                                                 "parentColumnSpace": 12.9501953125,
                                                 "parentRowSpace": 10,
-                                                "leftColumn": 0,
-                                                "rightColumn": 13,
+                                                "leftColumn": 1,
+                                                "rightColumn": 14,
                                                 "topRow": 53,
                                                 "bottomRow": 65,
                                                 "parentId": "1ri9x9yktd",
@@ -7145,8 +7171,8 @@
                                                 "isLoading": false,
                                                 "parentColumnSpace": 12.9501953125,
                                                 "parentRowSpace": 10,
-                                                "leftColumn": 0,
-                                                "rightColumn": 13,
+                                                "leftColumn": 1,
+                                                "rightColumn": 14,
                                                 "topRow": 36,
                                                 "bottomRow": 48,
                                                 "parentId": "1ri9x9yktd",
@@ -7192,8 +7218,8 @@
                                                 "isLoading": false,
                                                 "parentColumnSpace": 12.9501953125,
                                                 "parentRowSpace": 10,
-                                                "leftColumn": 0,
-                                                "rightColumn": 13,
+                                                "leftColumn": 1,
+                                                "rightColumn": 14,
                                                 "topRow": 18,
                                                 "bottomRow": 30,
                                                 "parentId": "1ri9x9yktd",
@@ -7280,8 +7306,8 @@
                                                 "isLoading": false,
                                                 "parentColumnSpace": 12.9501953125,
                                                 "parentRowSpace": 10,
-                                                "leftColumn": 0,
-                                                "rightColumn": 13,
+                                                "leftColumn": 1,
+                                                "rightColumn": 14,
                                                 "topRow": 0,
                                                 "bottomRow": 12,
                                                 "parentId": "1ri9x9yktd",
@@ -7654,6 +7680,9 @@
                                                     },
                                                     {
                                                         "key": "primaryColumns.customer_adress.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.city.computedValue"
                                                     }
                                                 ],
                                                 "primaryColumns": {
@@ -7775,7 +7804,7 @@
                                                                 "isDisabled": false,
                                                                 "isVisible": true,
                                                                 "backgroundColor": "#FDCF84",
-                                                                "onClick": "{{storeValue('status','pending',false);changeOrderStatus.run(() => {getOrders.run();getPendingOrders.run(), () => {}})}}"
+                                                                "onClick": "{{storeValue('orders_table_status','pending',false);changeOrderStatus.run(() => {getOrders.run();getPendingOrders.run(), () => {}})}}"
                                                             },
                                                             "menuItem1cggd50fes": {
                                                                 "id": "menuItem1cggd50fes",
@@ -7785,7 +7814,7 @@
                                                                 "isDisabled": false,
                                                                 "isVisible": true,
                                                                 "backgroundColor": "#A8CFCC",
-                                                                "onClick": "{{storeValue('status','successful',false);changeOrderStatus.run(() => {getOrders.run();getSuccessfulOrders.run(), () => {}})}}"
+                                                                "onClick": "{{storeValue('orders_table_status','successful',false);changeOrderStatus.run(() => {getOrders.run();getSuccessfulOrders.run(), () => {}})}}"
                                                             },
                                                             "menuItem0kg215mexe": {
                                                                 "id": "menuItem0kg215mexe",
@@ -7795,7 +7824,7 @@
                                                                 "isDisabled": false,
                                                                 "isVisible": true,
                                                                 "backgroundColor": "#F27F71",
-                                                                "onClick": "{{storeValue('status','rejected',false);changeOrderStatus.run(() => {getOrders.run();getRejectedOrders.run(), () => {}})}}"
+                                                                "onClick": "{{storeValue('orders_table_status','rejected',false);changeOrderStatus.run(() => {getOrders.run();getRejectedOrders.run(), () => {}})}}"
                                                             }
                                                         },
                                                         "horizontalAlignment": "LEFT"
@@ -7871,7 +7900,7 @@
                                                         "isCellVisible": true,
                                                         "isDerived": false,
                                                         "label": "total_cost",
-                                                        "computedValue": "{{orders_table.sanitizedTableData.map((currentRow) => ( currentRow.total_cost / 100))}}",
+                                                        "computedValue": "{{orders_table.sanitizedTableData.map((currentRow) => ( (currentRow.total_cost / 100).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })))}}",
                                                         "iconName": ""
                                                     },
                                                     "customer_name": {
@@ -7907,6 +7936,23 @@
                                                         "isDerived": false,
                                                         "label": "customer_adress",
                                                         "computedValue": "{{orders_table.sanitizedTableData.map((currentRow) => ( currentRow.customer_adress))}}"
+                                                    },
+                                                    "city": {
+                                                        "index": 10,
+                                                        "width": 150,
+                                                        "id": "city",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "city",
+                                                        "computedValue": "{{orders_table.sanitizedTableData.map((currentRow) => ( currentRow.city))}}"
                                                     }
                                                 },
                                                 "derivedColumns": {
@@ -7995,7 +8041,8 @@
                                                     "order_status": 167,
                                                     "payment_method": 146,
                                                     "payment_id": 109,
-                                                    "total_cost": 140
+                                                    "total_cost": 140,
+                                                    "_id": 234
                                                 },
                                                 "columnOrder": [
                                                     "_id",
@@ -8005,9 +8052,10 @@
                                                     "total_cost",
                                                     "payment_method",
                                                     "deleted",
-                                                    "payment_id",
                                                     "customer_name",
                                                     "customer_adress",
+                                                    "payment_id",
+                                                    "city",
                                                     "customColumn1",
                                                     "customColumn2"
                                                 ],
@@ -8029,9 +8077,9 @@
                                                 "isLoading": false,
                                                 "parentColumnSpace": 15.40625,
                                                 "parentRowSpace": 10,
-                                                "leftColumn": 0,
+                                                "leftColumn": 1,
                                                 "rightColumn": 64,
-                                                "topRow": 0,
+                                                "topRow": 1,
                                                 "bottomRow": 124,
                                                 "parentId": "0mxy4k1zn6",
                                                 "dynamicTriggerPathList": [
@@ -8062,7 +8110,7 @@
                                                         "key": "primaryColumns.customColumn1.menuItems.menuItem0kg215mexe.onClick"
                                                     }
                                                 ],
-                                                "primaryColumnId": "payment_id",
+                                                "primaryColumnId": "_id",
                                                 "onRowSelected": ""
                                             }
                                         ],
@@ -8274,7 +8322,7 @@
                                                                 "isDisabled": false,
                                                                 "isVisible": true,
                                                                 "backgroundColor": "#FDCF84",
-                                                                "onClick": "{{storeValue('status','pending',false);changeOrderStatus.run(() => {getOrders.run();getPendingOrders.run(), () => {}})}}"
+                                                                "onClick": "{{storeValue('pending_orders_table_status','pending',false);changePendingOrderStatus.run(() => {getOrders.run();getPendingOrders.run(), () => {};})}}"
                                                             },
                                                             "menuItem1cggd50fes": {
                                                                 "id": "menuItem1cggd50fes",
@@ -8284,7 +8332,7 @@
                                                                 "isDisabled": false,
                                                                 "isVisible": true,
                                                                 "backgroundColor": "#A8CFCC",
-                                                                "onClick": "{{storeValue('status','successful',false);changeOrderStatus.run(() => {getOrders.run();getSuccessfulOrders.run(), () => {}})}}"
+                                                                "onClick": "{{storeValue('pending_orders_table_status','successful',false);changePendingOrderStatus.run(() => {getOrders.run();getSuccessfulOrders.run();getPendingOrders.run(), () => {}})}}"
                                                             },
                                                             "menuItem0kg215mexe": {
                                                                 "id": "menuItem0kg215mexe",
@@ -8294,7 +8342,7 @@
                                                                 "isDisabled": false,
                                                                 "isVisible": true,
                                                                 "backgroundColor": "#F27F71",
-                                                                "onClick": "{{storeValue('status','rejected',false);changeOrderStatus.run(() => {getOrders.run();getRejectedOrders.run(), () => {}})}}"
+                                                                "onClick": "{{storeValue('pending_orders_table_status','rejected',false);changePendingOrderStatus.run(() => {getOrders.run();getRejectedOrders.run();getPendingOrders.run(), () => {}})}}"
                                                             }
                                                         },
                                                         "horizontalAlignment": "LEFT"
@@ -8370,7 +8418,7 @@
                                                         "isCellVisible": true,
                                                         "isDerived": false,
                                                         "label": "total_cost",
-                                                        "computedValue": "{{pending_orders_table.sanitizedTableData.map((currentRow) => ( currentRow.total_cost))}}"
+                                                        "computedValue": "{{pending_orders_table.sanitizedTableData.map((currentRow) => ( (currentRow.total_cost / 100).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })))}}"
                                                     },
                                                     "customer_name": {
                                                         "index": 8,
@@ -8491,7 +8539,9 @@
                                                     "status": 145,
                                                     "createdAt": 167,
                                                     "order_status": 165,
-                                                    "total_cost": 134
+                                                    "total_cost": 134,
+                                                    "customColumn2": 106,
+                                                    "_id": 228
                                                 },
                                                 "columnOrder": [
                                                     "_id",
@@ -8501,9 +8551,9 @@
                                                     "total_cost",
                                                     "payment_method",
                                                     "deleted",
-                                                    "payment_id",
                                                     "customer_name",
                                                     "customer_adress",
+                                                    "payment_id",
                                                     "customColumn1",
                                                     "customColumn2"
                                                 ],
@@ -8525,7 +8575,7 @@
                                                 "isLoading": false,
                                                 "parentColumnSpace": 15.40625,
                                                 "parentRowSpace": 10,
-                                                "leftColumn": 0,
+                                                "leftColumn": 1,
                                                 "rightColumn": 64,
                                                 "topRow": 1,
                                                 "bottomRow": 124,
@@ -8648,6 +8698,9 @@
                                                     },
                                                     {
                                                         "key": "primaryColumns.customer_adress.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.city.computedValue"
                                                     }
                                                 ],
                                                 "primaryColumns": {
@@ -8769,7 +8822,7 @@
                                                                 "isDisabled": false,
                                                                 "isVisible": true,
                                                                 "backgroundColor": "#FDCF84",
-                                                                "onClick": "{{storeValue('status','pending',false);changeOrderStatus.run(() => {getOrders.run();getPendingOrders.run(), () => {}})}}"
+                                                                "onClick": "{{storeValue('successful_orders_table_status','pending',false);changeSuccessfulOrderStatus.run(() => {getOrders.run();getPendingOrders.run();getSuccessfulOrders.run(), () => {}})}}"
                                                             },
                                                             "menuItem1cggd50fes": {
                                                                 "id": "menuItem1cggd50fes",
@@ -8779,7 +8832,7 @@
                                                                 "isDisabled": false,
                                                                 "isVisible": true,
                                                                 "backgroundColor": "#A8CFCC",
-                                                                "onClick": "{{storeValue('status','successful',false);changeOrderStatus.run(() => {getOrders.run();getSuccessfulOrders.run(), () => {}})}}"
+                                                                "onClick": "{{storeValue('successful_orders_table_status','successful',false);changeSuccessfulOrderStatus.run(() => {getOrders.run();getSuccessfulOrders.run(), () => {}})}}"
                                                             },
                                                             "menuItem0kg215mexe": {
                                                                 "id": "menuItem0kg215mexe",
@@ -8789,7 +8842,7 @@
                                                                 "isDisabled": false,
                                                                 "isVisible": true,
                                                                 "backgroundColor": "#F27F71",
-                                                                "onClick": "{{storeValue('status','rejected',false);changeOrderStatus.run(() => {getOrders.run();getRejectedOrders.run(), () => {}})}}"
+                                                                "onClick": "{{storeValue('successful_orders_table_status','rejected',false);changeSuccessfulOrderStatus.run(() => {getOrders.run();getRejectedOrders.run();getSuccessfulOrders.run(), () => {}})}}"
                                                             }
                                                         },
                                                         "horizontalAlignment": "LEFT"
@@ -8865,7 +8918,7 @@
                                                         "isCellVisible": true,
                                                         "isDerived": false,
                                                         "label": "total_cost",
-                                                        "computedValue": "{{successful_orders_table.sanitizedTableData.map((currentRow) => ( currentRow.total_cost / 100))}}"
+                                                        "computedValue": "{{successful_orders_table.sanitizedTableData.map((currentRow) => ( (currentRow.total_cost / 100).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })))}}"
                                                     },
                                                     "customer_name": {
                                                         "index": 7,
@@ -8900,6 +8953,23 @@
                                                         "isDerived": false,
                                                         "label": "customer_adress",
                                                         "computedValue": "{{successful_orders_table.sanitizedTableData.map((currentRow) => ( currentRow.customer_adress))}}"
+                                                    },
+                                                    "city": {
+                                                        "index": 10,
+                                                        "width": 150,
+                                                        "id": "city",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "city",
+                                                        "computedValue": "{{successful_orders_table.sanitizedTableData.map((currentRow) => ( currentRow.city))}}"
                                                     }
                                                 },
                                                 "derivedColumns": {
@@ -8986,7 +9056,8 @@
                                                     "status": 145,
                                                     "createdAt": 182,
                                                     "order_status": 132,
-                                                    "total_cost": 126
+                                                    "total_cost": 126,
+                                                    "_id": 228
                                                 },
                                                 "columnOrder": [
                                                     "_id",
@@ -8999,6 +9070,7 @@
                                                     "customer_name",
                                                     "customer_adress",
                                                     "payment_id",
+                                                    "city",
                                                     "customColumn1",
                                                     "customColumn2"
                                                 ],
@@ -9020,7 +9092,7 @@
                                                 "isLoading": false,
                                                 "parentColumnSpace": 15.40625,
                                                 "parentRowSpace": 10,
-                                                "leftColumn": 0,
+                                                "leftColumn": 1,
                                                 "rightColumn": 64,
                                                 "topRow": 1,
                                                 "bottomRow": 124,
@@ -9143,6 +9215,9 @@
                                                     },
                                                     {
                                                         "key": "primaryColumns.customer_adress.computedValue"
+                                                    },
+                                                    {
+                                                        "key": "primaryColumns.city.computedValue"
                                                     }
                                                 ],
                                                 "primaryColumns": {
@@ -9264,7 +9339,7 @@
                                                                 "isDisabled": false,
                                                                 "isVisible": true,
                                                                 "backgroundColor": "#FDCF84",
-                                                                "onClick": "{{storeValue('status','pending',false);changeOrderStatus.run(() => {getOrders.run();getPendingOrders.run(), () => {}})}}"
+                                                                "onClick": "{{storeValue('rejected_orders_table_status','pending',false);changeRejectedOrderStatus.run(() => {getOrders.run();getRejectedOrders.run();getPendingOrders.run(), () => {}})}}"
                                                             },
                                                             "menuItem1cggd50fes": {
                                                                 "id": "menuItem1cggd50fes",
@@ -9274,7 +9349,7 @@
                                                                 "isDisabled": false,
                                                                 "isVisible": true,
                                                                 "backgroundColor": "#A8CFCC",
-                                                                "onClick": "{{storeValue('status','successful',false);changeOrderStatus.run(() => {getOrders.run();getSuccessfulOrders.run(), () => {}})}}"
+                                                                "onClick": "{{storeValue('rejected_orders_table_status','successful',false);changeRejectedOrderStatus.run(() => {getOrders.run();getRejectedOrders.run();getSuccessfulOrders.run(), () => {}})}}"
                                                             },
                                                             "menuItem0kg215mexe": {
                                                                 "id": "menuItem0kg215mexe",
@@ -9284,7 +9359,7 @@
                                                                 "isDisabled": false,
                                                                 "isVisible": true,
                                                                 "backgroundColor": "#F27F71",
-                                                                "onClick": "{{storeValue('status','rejected',false);changeOrderStatus.run(() => {getOrders.run();getRejectedOrders.run(), () => {}})}}"
+                                                                "onClick": "{{storeValue('rejected_orders_table_status','rejected',false);changeRejectedOrderStatus.run(() => {getOrders.run();getRejectedOrders.run(), () => {}})}}"
                                                             }
                                                         },
                                                         "horizontalAlignment": "LEFT"
@@ -9360,7 +9435,7 @@
                                                         "isCellVisible": true,
                                                         "isDerived": false,
                                                         "label": "total_cost",
-                                                        "computedValue": "{{rejected_orders_table.sanitizedTableData.map((currentRow) => ( currentRow.total_cost / 100))}}"
+                                                        "computedValue": "{{rejected_orders_table.sanitizedTableData.map((currentRow) => ( (currentRow.total_cost / 100).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })))}}"
                                                     },
                                                     "customer_name": {
                                                         "index": 8,
@@ -9395,6 +9470,23 @@
                                                         "isDerived": false,
                                                         "label": "customer_adress",
                                                         "computedValue": "{{rejected_orders_table.sanitizedTableData.map((currentRow) => ( currentRow.customer_adress))}}"
+                                                    },
+                                                    "city": {
+                                                        "index": 9,
+                                                        "width": 150,
+                                                        "id": "city",
+                                                        "horizontalAlignment": "LEFT",
+                                                        "verticalAlignment": "CENTER",
+                                                        "columnType": "text",
+                                                        "textSize": "PARAGRAPH",
+                                                        "enableFilter": true,
+                                                        "enableSort": true,
+                                                        "isVisible": true,
+                                                        "isDisabled": false,
+                                                        "isCellVisible": true,
+                                                        "isDerived": false,
+                                                        "label": "city",
+                                                        "computedValue": "{{rejected_orders_table.sanitizedTableData.map((currentRow) => ( currentRow.city))}}"
                                                     }
                                                 },
                                                 "derivedColumns": {
@@ -9491,9 +9583,10 @@
                                                     "total_cost",
                                                     "payment_method",
                                                     "deleted",
-                                                    "payment_id",
                                                     "customer_name",
                                                     "customer_adress",
+                                                    "city",
+                                                    "payment_id",
                                                     "customColumn1",
                                                     "customColumn2"
                                                 ],
@@ -9515,7 +9608,7 @@
                                                 "isLoading": false,
                                                 "parentColumnSpace": 15.40625,
                                                 "parentRowSpace": 10,
-                                                "leftColumn": 0,
+                                                "leftColumn": 1,
                                                 "rightColumn": 64,
                                                 "topRow": 1,
                                                 "bottomRow": 124,

@@ -6567,7 +6567,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-05-31T20:39:58.361Z",
-        "updatedAt": "2024-01-15T15:41:00.050Z",
+        "updatedAt": "2024-01-24T10:22:07.306Z",
         "deleted": false,
         "policies": [
             {
@@ -6837,7 +6837,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"_id\":{{JSON.stringify(orders_table.selectedRow._id)}},\n\t\"status\":{{JSON.stringify(main.store.status)}}\n}"
+                "body": "{\n\t\"_id\":{{JSON.stringify(orders_table.selectedRow._id)}},\n\t\"status\":{{JSON.stringify(main.store.orders_table_status)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -6852,13 +6852,14 @@
             "jsonPathKeys": [
                 "main.env.back",
                 "JSON.stringify(orders_table.selectedRow._id)",
-                "JSON.stringify(main.store.status)"
+                "JSON.stringify(main.store.status)",
+                "JSON.stringify(main.store.orders_table_status)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-01-15T08:28:45.211Z",
-        "updatedAt": "2024-01-15T16:40:32.703Z",
+        "updatedAt": "2024-01-24T10:27:19.609Z",
         "deleted": false,
         "policies": [
             {
@@ -6939,7 +6940,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-01-15T10:20:22.211Z",
-        "updatedAt": "2024-01-15T10:55:20.353Z",
+        "updatedAt": "2024-01-24T09:14:49.729Z",
         "deleted": false,
         "policies": [
             {
@@ -7576,6 +7577,319 @@
         },
         "createdAt": "2024-01-16T15:56:45.321Z",
         "updatedAt": "2024-01-16T15:57:01.974Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65b0d51bd0c0f7dec53ffac5",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "getCredentials",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.back}}/getCredentials"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": true,
+            "pageId": "Start Page",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "GET",
+                "headers": [],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.back"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-01-24T09:15:07.617Z",
+        "updatedAt": "2024-01-24T09:27:01.577Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65b0e4d4d0c0f7dec53ffac6",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "changePendingOrderStatus",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.back}}/changePendingOrderStatus"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Orders",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "PUT",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "application/json"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n\t\"_id\":{{JSON.stringify(pending_orders_table.selectedRow._id)}},\n\t\"status\":{{JSON.stringify(main.store.pending_orders_table_status)}}\n}"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.back",
+                "JSON.stringify(pending_orders_table.selectedRow._id)",
+                "JSON.stringify(main.store.pending_orders_table_status)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-01-24T10:22:12.859Z",
+        "updatedAt": "2024-01-24T10:32:36.261Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65b0e51ad0c0f7dec53ffac7",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "changeSuccessfulOrderStatus",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.back}}/changeSuccessfulOrderStatus"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Orders",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "PUT",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "application/json"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n\t\"_id\":{{JSON.stringify(successful_orders_table.selectedRow._id)}},\n\t\"status\":{{JSON.stringify(main.store.successful_orders_table_status)}}\n}"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.back",
+                "JSON.stringify(successful_orders_table.selectedRow._id)",
+                "JSON.stringify(main.store.successful_orders_table_status)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-01-24T10:23:22.833Z",
+        "updatedAt": "2024-01-24T10:39:07.034Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65b0e596d0c0f7dec53ffac8",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "changeRejectedOrderStatus",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.back}}/changeRejectedOrderStatus"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Orders",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "PUT",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "application/json"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n\t\"_id\":{{JSON.stringify(rejected_orders_table.selectedRow._id)}},\n\t\"status\":{{JSON.stringify(main.store.rejected_orders_table_status)}}\n}"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.back",
+                "JSON.stringify(rejected_orders_table.selectedRow._id)",
+                "JSON.stringify(main.store.rejected_orders_table_status)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-01-24T10:25:26.428Z",
+        "updatedAt": "2024-01-24T10:41:21.594Z",
         "deleted": false,
         "policies": [
             {
