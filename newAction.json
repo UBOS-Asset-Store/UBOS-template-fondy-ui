@@ -6852,14 +6852,13 @@
             "jsonPathKeys": [
                 "main.env.back",
                 "JSON.stringify(orders_table.selectedRow._id)",
-                "JSON.stringify(main.store.status)",
                 "JSON.stringify(main.store.orders_table_status)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-01-15T08:28:45.211Z",
-        "updatedAt": "2024-01-24T10:27:19.609Z",
+        "updatedAt": "2024-01-24T16:25:40.764Z",
         "deleted": false,
         "policies": [
             {
@@ -7646,7 +7645,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-01-24T09:15:07.617Z",
-        "updatedAt": "2024-01-24T09:27:01.577Z",
+        "updatedAt": "2024-01-24T11:21:44.907Z",
         "deleted": false,
         "policies": [
             {

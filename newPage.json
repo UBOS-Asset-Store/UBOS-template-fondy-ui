@@ -444,7 +444,7 @@
                                                                                                 "key": "7ozrvnk23b",
                                                                                                 "iconSVG": "/static/media/icon.cca02633.svg",
                                                                                                 "buttonVariant": "PRIMARY",
-                                                                                                "buttonColor": "#38AFF4",
+                                                                                                "buttonColor": "#FCC3BB",
                                                                                                 "disabledWhenInvalid": false,
                                                                                                 "resetFormOnClick": true,
                                                                                                 "widgetId": "t40hbbuski",
@@ -1758,7 +1758,7 @@
                                                 "leftColumn": 1,
                                                 "rightColumn": 64,
                                                 "topRow": 7,
-                                                "bottomRow": 127,
+                                                "bottomRow": 76,
                                                 "parentId": "5goubwl3lo",
                                                 "dynamicTriggerPathList": [],
                                                 "dynamicPropertyPathList": []
@@ -1941,7 +1941,7 @@
                                         "leftColumn": 0,
                                         "rightColumn": 457.125,
                                         "topRow": 0,
-                                        "bottomRow": 1290,
+                                        "bottomRow": 780,
                                         "parentId": "yn7umq3s1t"
                                     }
                                 ],
@@ -1964,7 +1964,8 @@
                                 "bottomRow": 137,
                                 "parentId": "0",
                                 "dynamicBindingPathList": [],
-                                "dynamicTriggerPathList": []
+                                "dynamicTriggerPathList": [],
+                                "shouldScrollContents": true
                             },
                             {
                                 "width": 724,
@@ -4032,7 +4033,7 @@
                                     }
                                 ],
                                 "version": 1,
-                                "classStyle": "small_container",
+                                "classStyle": "modules",
                                 "type": "CONTAINER_WIDGET",
                                 "hideCard": false,
                                 "displayName": "Container",
@@ -4050,7 +4051,8 @@
                                 "bottomRow": 136,
                                 "parentId": "0",
                                 "dynamicBindingPathList": [],
-                                "dynamicTriggerPathList": []
+                                "dynamicTriggerPathList": [],
+                                "shouldScrollContents": true
                             },
                             {
                                 "width": 690,
@@ -5738,7 +5740,7 @@
                                                 "leftColumn": 1,
                                                 "rightColumn": 64,
                                                 "topRow": 7,
-                                                "bottomRow": 128,
+                                                "bottomRow": 76,
                                                 "parentId": "h1kagy1itu",
                                                 "dynamicTriggerPathList": [
                                                     {
@@ -5766,7 +5768,7 @@
                                         "leftColumn": 0,
                                         "rightColumn": 457.125,
                                         "topRow": 0,
-                                        "bottomRow": 1300,
+                                        "bottomRow": 780,
                                         "parentId": "bnftm1hu63"
                                     }
                                 ],
@@ -5786,14 +5788,15 @@
                                 "leftColumn": 8,
                                 "rightColumn": 64,
                                 "topRow": 6,
-                                "bottomRow": 137,
+                                "bottomRow": 85,
                                 "parentId": "0",
                                 "dynamicBindingPathList": [
                                     {
                                         "key": "borderColor"
                                     }
                                 ],
-                                "dynamicTriggerPathList": []
+                                "dynamicTriggerPathList": [],
+                                "shouldScrollContents": true
                             },
                             {
                                 "width": 609.0999999999999,
@@ -6687,7 +6690,7 @@
                                                                 "label": "Merchant id",
                                                                 "labelPosition": "Left",
                                                                 "labelAlignment": "left",
-                                                                "labelWidth": "10",
+                                                                "labelWidth": "9",
                                                                 "widgetName": "merchant_id_input",
                                                                 "version": 2,
                                                                 "defaultText": "{{getCredentials.data.merchant_id}}",
@@ -6728,7 +6731,7 @@
                                                                 "label": "Payment key:",
                                                                 "labelPosition": "Left",
                                                                 "labelAlignment": "left",
-                                                                "labelWidth": "10",
+                                                                "labelWidth": "9",
                                                                 "widgetName": "password_input",
                                                                 "version": 2,
                                                                 "defaultText": "{{getCredentials.data.password}}",
@@ -6769,7 +6772,7 @@
                                                                 "label": "Your URL",
                                                                 "labelPosition": "Left",
                                                                 "labelAlignment": "left",
-                                                                "labelWidth": "10",
+                                                                "labelWidth": "9",
                                                                 "widgetName": "Input3",
                                                                 "version": 2,
                                                                 "defaultText": "{{main.env.back}}/makeOrder",
@@ -6991,7 +6994,8 @@
                                 "bottomRow": 93,
                                 "parentId": "0",
                                 "dynamicBindingPathList": [],
-                                "dynamicTriggerPathList": []
+                                "dynamicTriggerPathList": [],
+                                "shouldScrollContents": true
                             }
                         ],
                         "snapRows": 95,
@@ -7423,7 +7427,8 @@
                                 "bottomRow": 79,
                                 "parentId": "0",
                                 "dynamicBindingPathList": [],
-                                "dynamicTriggerPathList": []
+                                "dynamicTriggerPathList": [],
+                                "shouldScrollContents": true
                             }
                         ],
                         "snapRows": 78,
@@ -7554,7 +7559,7 @@
                         "children": [
                             {
                                 "isVisible": true,
-                                "shouldScrollContents": false,
+                                "shouldScrollContents": true,
                                 "widgetName": "orders_tabs",
                                 "animateLoading": true,
                                 "tabsObj": {
@@ -8080,7 +8085,7 @@
                                                 "leftColumn": 1,
                                                 "rightColumn": 64,
                                                 "topRow": 1,
-                                                "bottomRow": 124,
+                                                "bottomRow": 70,
                                                 "parentId": "0mxy4k1zn6",
                                                 "dynamicTriggerPathList": [
                                                     {
@@ -8123,7 +8128,7 @@
                                         "leftColumn": 0,
                                         "rightColumn": 230.25,
                                         "topRow": 0,
-                                        "bottomRow": 1260,
+                                        "bottomRow": 720,
                                         "parentId": "smoar7kqht",
                                         "dynamicBindingPathList": [],
                                         "dynamicTriggerPathList": []
@@ -8578,7 +8583,7 @@
                                                 "leftColumn": 1,
                                                 "rightColumn": 64,
                                                 "topRow": 1,
-                                                "bottomRow": 124,
+                                                "bottomRow": 70,
                                                 "parentId": "yl9c0aorv4",
                                                 "dynamicTriggerPathList": [
                                                     {
@@ -8621,7 +8626,7 @@
                                         "leftColumn": 0,
                                         "rightColumn": 230.25,
                                         "topRow": 0,
-                                        "bottomRow": 1260,
+                                        "bottomRow": 720,
                                         "parentId": "smoar7kqht",
                                         "dynamicBindingPathList": [],
                                         "dynamicTriggerPathList": []
@@ -9095,7 +9100,7 @@
                                                 "leftColumn": 1,
                                                 "rightColumn": 64,
                                                 "topRow": 1,
-                                                "bottomRow": 124,
+                                                "bottomRow": 70,
                                                 "parentId": "qcikvad7vj",
                                                 "dynamicTriggerPathList": [
                                                     {
@@ -9138,7 +9143,7 @@
                                         "leftColumn": 0,
                                         "rightColumn": 594.8125,
                                         "topRow": 1,
-                                        "bottomRow": 1260,
+                                        "bottomRow": 720,
                                         "parentId": "smoar7kqht",
                                         "dynamicBindingPathList": [],
                                         "dynamicTriggerPathList": []
@@ -9215,9 +9220,6 @@
                                                     },
                                                     {
                                                         "key": "primaryColumns.customer_adress.computedValue"
-                                                    },
-                                                    {
-                                                        "key": "primaryColumns.city.computedValue"
                                                     }
                                                 ],
                                                 "primaryColumns": {
@@ -9470,23 +9472,6 @@
                                                         "isDerived": false,
                                                         "label": "customer_adress",
                                                         "computedValue": "{{rejected_orders_table.sanitizedTableData.map((currentRow) => ( currentRow.customer_adress))}}"
-                                                    },
-                                                    "city": {
-                                                        "index": 9,
-                                                        "width": 150,
-                                                        "id": "city",
-                                                        "horizontalAlignment": "LEFT",
-                                                        "verticalAlignment": "CENTER",
-                                                        "columnType": "text",
-                                                        "textSize": "PARAGRAPH",
-                                                        "enableFilter": true,
-                                                        "enableSort": true,
-                                                        "isVisible": true,
-                                                        "isDisabled": false,
-                                                        "isCellVisible": true,
-                                                        "isDerived": false,
-                                                        "label": "city",
-                                                        "computedValue": "{{rejected_orders_table.sanitizedTableData.map((currentRow) => ( currentRow.city))}}"
                                                     }
                                                 },
                                                 "derivedColumns": {
@@ -9585,7 +9570,6 @@
                                                     "deleted",
                                                     "customer_name",
                                                     "customer_adress",
-                                                    "city",
                                                     "payment_id",
                                                     "customColumn1",
                                                     "customColumn2"
@@ -9611,7 +9595,7 @@
                                                 "leftColumn": 1,
                                                 "rightColumn": 64,
                                                 "topRow": 1,
-                                                "bottomRow": 124,
+                                                "bottomRow": 70,
                                                 "parentId": "i916polgaa",
                                                 "dynamicTriggerPathList": [
                                                     {
@@ -9654,7 +9638,7 @@
                                         "leftColumn": 0,
                                         "rightColumn": 594.8125,
                                         "topRow": 1,
-                                        "bottomRow": 1260,
+                                        "bottomRow": 720,
                                         "parentId": "smoar7kqht",
                                         "dynamicBindingPathList": [],
                                         "dynamicTriggerPathList": []
